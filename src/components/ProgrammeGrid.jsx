@@ -9,7 +9,7 @@ export default function ProgrammeGrid({ onOpenModal }) {
           {programmes.map((prog) => (
             <div key={prog.id} className="prog-card">
               <div className="prog-institute">
-                {/* Fallback to text if logo fails to load */}
+                <img src={prog.logo} alt={prog.institute} className="prog-logo" onError={(e) => { e.target.style.display = 'none'; }} />
                 {prog.institute}
               </div>
               <h3 className="prog-title">{prog.name}</h3>
@@ -21,22 +21,10 @@ export default function ProgrammeGrid({ onOpenModal }) {
                   <strong>Batch starts:</strong> {prog.startDate}
                 </span>
               </div>
-              <p className="prog-desc">{prog.outcome} <br/><br/><strong>Best for:</strong> {prog.bestFor}</p>
-              <div className="prog-cta" style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
-                <button 
-                  type="button" 
-                  className="btn btn-primary btn-block" 
-                  onClick={() => onOpenModal('brochure', prog.id)}
-                >
-                  Download Brochure
-                </button>
-                <button 
-                  type="button" 
-                  className="btn btn-outline btn-block" 
-                  onClick={() => onOpenModal('callback', prog.id)}
-                >
-                  Request a Callback
-                </button>
+              <p className="prog-desc">{prog.outcome}<br/><br/><strong>Best for:</strong> {prog.bestFor}</p>
+              <div className="prog-cta">
+                <button type="button" className="btn btn-primary btn-block" onClick={() => onOpenModal('brochure', prog.id)}>Download Brochure</button>
+                <button type="button" className="btn btn-outline btn-block" style={{marginTop: '10px'}} onClick={() => onOpenModal('callback', prog.id)}>Request a Callback</button>
               </div>
             </div>
           ))}

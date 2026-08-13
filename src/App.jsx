@@ -10,7 +10,7 @@ import LeadModal from './components/LeadModal';
 
 export default function App() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalType, setModalType] = useState('callback'); // 'callback' or 'brochure'
+  const [modalType, setModalType] = useState('callback');
   const [selectedProgram, setSelectedProgram] = useState('');
 
   const openModal = (type, programId = '') => {
@@ -20,9 +20,9 @@ export default function App() {
   };
 
   useEffect(() => {
-    // Simple sticky nav implementation
     const handleScroll = () => {
       const nav = document.getElementById('stickyNav');
+      if (!nav) return;
       if (window.scrollY > 200) {
         nav.classList.add('visible');
       } else {
@@ -44,11 +44,11 @@ export default function App() {
         <FAQ />
       </main>
       <Footer onOpenModal={openModal} />
-      <LeadModal 
-        isOpen={modalOpen} 
-        onClose={() => setModalOpen(false)} 
-        modalType={modalType} 
-        selectedProgram={selectedProgram} 
+      <LeadModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        modalType={modalType}
+        selectedProgram={selectedProgram}
       />
     </>
   );
