@@ -9,13 +9,14 @@ const logos = [
 ];
 
 export default function LogoRunner() {
+  const base = import.meta.env.BASE_URL;
   return (
     <div className="logo-runner-wrapper">
       <div className="logo-runner-track">
         {/* Duplicating the array 3 times ensures a smooth infinite loop regardless of screen size */}
         {[...logos, ...logos, ...logos].map((logo, index) => (
           <div key={index} className="logo-runner-item">
-            <img src={logo} alt={`Institute Partner ${index}`} loading="lazy" />
+            <img src={`${base}${logo.replace(/^\//, '')}`} alt={`Institute Partner ${index}`} loading="lazy" />
           </div>
         ))}
       </div>

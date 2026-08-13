@@ -1,6 +1,7 @@
 import { programmes } from '../data';
 
 export default function ProgrammeGrid({ onOpenModal }) {
+  const base = import.meta.env.BASE_URL;
   return (
     <section className="programme-section" id="programmes">
       <div className="container">
@@ -9,7 +10,7 @@ export default function ProgrammeGrid({ onOpenModal }) {
           {programmes.map((prog) => (
             <div key={prog.id} className="prog-card">
               <div className="prog-institute">
-                <img src={prog.logo} alt={prog.institute} className="prog-logo" onError={(e) => { e.target.style.display = 'none'; }} />
+                <img src={prog.logo.startsWith('/') ? `${base}${prog.logo.replace(/^\//, '')}` : prog.logo} alt={prog.institute} className="prog-logo" onError={(e) => { e.target.style.display = 'none'; }} />
                 {prog.institute}
               </div>
               <h3 className="prog-title">{prog.name}</h3>

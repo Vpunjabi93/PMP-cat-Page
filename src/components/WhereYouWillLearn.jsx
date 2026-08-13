@@ -1,6 +1,7 @@
 import { programmes } from '../data';
 
 export default function WhereYouWillLearn() {
+  const base = import.meta.env.BASE_URL;
   return (
     <section className="campus" id="campuses">
       <div className="container">
@@ -12,7 +13,7 @@ export default function WhereYouWillLearn() {
           {programmes.map((prog) => (
             <figure key={prog.id} className="campus-card">
               <img 
-                src={prog.campusImage} 
+                src={prog.campusImage.startsWith('/') ? `${base}${prog.campusImage.replace(/^\//, '')}` : prog.campusImage} 
                 alt={`${prog.institute} Campus`} 
                 loading="lazy"
                 onError={(e) => { 
