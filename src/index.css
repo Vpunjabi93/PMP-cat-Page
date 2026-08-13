@@ -319,15 +319,13 @@ section[id], main[id] { scroll-margin-top: calc(var(--sticky-h) + 16px); }
 }
 .hero-bg {
     position: absolute;
-    inset: 0;
-    background: url('/assets/img/banner.jpg') 0% center / cover no-repeat;
+    inset: -150px; /* Bleed area to allow panning without showing edges */
+    background: url('/assets/img/banner.jpg') center/cover no-repeat;
     z-index: -2;
 }
 @media (min-width: 1024px) {
     .hero-bg {
-        /* Zoom slightly on desktop so we have room to pan the image left (pushing plaque right) */
-        background-size: 125% auto;
-        background-position: left center;
+        transform: translate(70px, -40px);
     }
 }
 .hero-gradient-overlay {
