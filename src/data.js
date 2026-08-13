@@ -15,7 +15,7 @@ export const programmes = [
   {
     id: "indore",
     institute: "IIM Indore",
-    logo: "/assets/logos/iim-indore.png",
+    logo: "/assets/logos/iim-indore.jpg",
     name: "Senior Management Programme (Batch 07)",
     duration: "12 months",
     format: "Weekend format + Campus Immersion",
@@ -41,7 +41,7 @@ export const programmes = [
   {
     id: "nagpur",
     institute: "IIM Nagpur",
-    logo: "/assets/logos/iim-nagpur.png",
+    logo: "/assets/logos/iim-nagpur.jpg",
     name: "Senior Management Programme (Batch 11)",
     duration: "12 months",
     format: "Live Online + Campus Immersion",
