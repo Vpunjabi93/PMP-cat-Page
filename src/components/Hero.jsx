@@ -6,8 +6,8 @@ export default function Hero({ onOpenModal }) {
       <div className="hero-container container">
         <div className="hero-content">
           <span className="hero-eyebrow">Backed by The Times Group</span>
-          <h1>Step Into the C-Suite with an IIM Senior Management Programme. Find the Right Fit for Your Leadership Goals.</h1>
-          <p>From sharpening your financial acumen to leading digital transformation — explore 12-month executive programmes from IIM Calcutta, IIM Indore, IIM Kashipur, and IIM Nagpur.</p>
+          <h1>Step Into the Leadership roles with confidence by learning Senior Management from top IIMs.</h1>
+          <p>Find the Right Fit for Your Leadership Goals.</p>
           <div className="hero-ctas">
             <button type="button" className="btn btn-primary" onClick={() => onOpenModal('brochure', '')}>Download Brochure</button>
             <button type="button" className="btn btn-secondary btn-secondary-white-border" onClick={() => onOpenModal('callback', '')}>Request a Callback</button>
