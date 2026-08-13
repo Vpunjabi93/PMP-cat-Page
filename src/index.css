@@ -1207,3 +1207,61 @@ body.modal-open {
 }
 
 
+
+/* ==========================================================================
+   Logo Runner Marquee
+   ========================================================================== */
+
+.logo-runner-wrapper {
+    overflow: hidden;
+    background: var(--tp-white);
+    padding: 32px 0;
+    border-bottom: 1px solid var(--tp-gray-200);
+    width: 100%;
+    display: flex;
+}
+
+.logo-runner-track {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding-right: 80px;
+    animation: scrollRunner 35s linear infinite;
+}
+
+.logo-runner-track:hover {
+    animation-play-state: paused;
+}
+
+.logo-runner-item {
+    flex-shrink: 0;
+}
+
+.logo-runner-item img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(60%);
+    transition: all 0.3s ease;
+}
+
+.logo-runner-item img:hover {
+    filter: grayscale(0%) opacity(100%);
+    transform: scale(1.05);
+}
+
+@keyframes scrollRunner {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% / 3)); }
+}
+
+@media (max-width: 768px) {
+    .logo-runner-track {
+        gap: 40px;
+        padding-right: 40px;
+        animation-duration: 25s;
+    }
+    .logo-runner-item img {
+        height: 50px;
+    }
+}

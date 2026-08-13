@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import LogoRunner from './components/LogoRunner';
 import ProgrammeGrid from './components/ProgrammeGrid';
 import ComparisonTable from './components/ComparisonTable';
 import TrustSection from './components/TrustSection';
@@ -39,6 +40,7 @@ export default function App() {
       <Header onOpenModal={openModal} />
       <main id="top">
         <Hero onOpenModal={openModal} />
+        <LogoRunner />
         <ProgrammeGrid onOpenModal={openModal} />
         <ComparisonTable onOpenModal={openModal} />
         <TrustSection />
