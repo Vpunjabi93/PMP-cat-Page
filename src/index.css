@@ -310,7 +310,7 @@ section[id], main[id] { scroll-margin-top: calc(var(--sticky-h) + 16px); }
 /* Hero Section */
 .hero {
     position: relative;
-    padding: clamp(72px, 10vw, 60px) 0;
+    padding: 40px 0;
     display: flex;
     align-items: center;
     color: var(--tp-white);
@@ -383,7 +383,7 @@ section[id], main[id] { scroll-margin-top: calc(var(--sticky-h) + 16px); }
 }
 .hero-content p {
     font-size: clamp(16px, 2vw, 20px);
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     color: rgba(255, 255, 255, 0.95);
     max-width: 56ch;
 }
@@ -396,7 +396,7 @@ section[id], main[id] { scroll-margin-top: calc(var(--sticky-h) + 16px); }
     list-style: none;
     display: flex;
     gap: 16px;
-    margin-top: 40px;
+    margin-top: 24px;
     flex-wrap: wrap;
 }
 .hero-stat {
@@ -1215,7 +1215,7 @@ body.modal-open {
 .logo-runner-wrapper {
     overflow: hidden;
     background: var(--tp-white);
-    padding: 32px 0;
+    padding: 16px 0;
     border-bottom: 1px solid var(--tp-gray-200);
     width: 100%;
     display: flex;
@@ -1238,7 +1238,7 @@ body.modal-open {
 }
 
 .logo-runner-item img {
-    height: 70px;
+    height: 50px;
     width: auto;
     object-fit: contain;
     filter: grayscale(100%) opacity(60%);
@@ -1262,6 +1262,6 @@ body.modal-open {
         animation-duration: 25s;
     }
     .logo-runner-item img {
-        height: 50px;
+        height: 40px;
     }
 }
