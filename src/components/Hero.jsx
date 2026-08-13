@@ -1,4 +1,15 @@
+import { useState } from 'react';
+
 export default function Hero({ onOpenModal }) {
+  const [formData, setFormData] = useState({
+    name: '', email: '', phone: '', experience: '', programme: ''
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('Form submitted! (Mock)');
+  };
+
   return (
     <section className="hero">
       <div className="hero-bg" aria-hidden="true"></div>
@@ -33,7 +44,48 @@ export default function Hero({ onOpenModal }) {
             </li>
           </ul>
         </div>
-        {/* Inline form removed as we are using a dynamic modal triggered by CTAs */}
+        <div className="hero-form-wrapper">
+          <div className="hero-form-container">
+            <h3 className="form-title">Request A Callback</h3>
+            <form onSubmit={handleSubmit} noValidate>
+              <div className="form-group">
+                <label htmlFor="heroName">Name <span className="req">*</span></label>
+                <input type="text" id="heroName" required value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} />
+              </div>
+              <div className="form-group">
+                <label htmlFor="heroEmail">Email <span className="req">*</span></label>
+                <input type="email" id="heroEmail" required value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} />
+              </div>
+              <div className="form-group">
+                <label htmlFor="heroPhone">Phone <span className="req">*</span></label>
+                <input type="tel" id="heroPhone" required placeholder="10-digit mobile number" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} />
+              </div>
+              <div className="form-group">
+                <label htmlFor="heroExperience">Work Experience <span className="req">*</span></label>
+                <select id="heroExperience" required value={formData.experience} onChange={e => setFormData({...formData, experience: e.target.value})}>
+                  <option value="" disabled>Select your experience</option>
+                  <option value="Fresher">Fresher</option>
+                  <option value="2-5 years">2-5 years</option>
+                  <option value="5-10 years">5-10 years</option>
+                  <option value="10-15 years">10-15 years</option>
+                  <option value="15+ Years">15+ Years</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label htmlFor="heroProgramme">Interested Programme <span className="req">*</span></label>
+                <select id="heroProgramme" required value={formData.programme} onChange={e => setFormData({...formData, programme: e.target.value})}>
+                  <option value="" disabled>Select a programme</option>
+                  <option value="Help me decide">Help me decide</option>
+                  <option value="calcutta">IIM Calcutta Senior Management Programme</option>
+                  <option value="indore">IIM Indore Senior Management Programme</option>
+                  <option value="kashipur">IIM Kashipur Senior Management Programme</option>
+                  <option value="nagpur">IIM Nagpur Senior Management Programme</option>
+                </select>
+              </div>
+              <button type="submit" className="btn btn-primary btn-block">Submit Details</button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   );
