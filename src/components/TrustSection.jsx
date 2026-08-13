@@ -24,6 +24,9 @@ export default function TrustSection() {
           <div className="faculty-list">
             {faculty.map((f, idx) => (
               <div key={idx} className="faculty-card">
+                <div className="faculty-avatar">
+                  <img src={`https://ui-avatars.com/api/?name=${encodeURIComponent(f.name.replace('Prof. ', ''))}&background=00008C&color=fff`} alt={f.name} style={{width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover'}} />
+                </div>
                 <div className="faculty-info">
                   <strong>{f.name}</strong>
                   <span>{f.institute}</span>

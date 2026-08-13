@@ -5,6 +5,7 @@ import ProgrammeGrid from './components/ProgrammeGrid';
 import ComparisonTable from './components/ComparisonTable';
 import TrustSection from './components/TrustSection';
 import FAQ from './components/FAQ';
+import WhereYouWillLearn from './components/WhereYouWillLearn';
 import Footer from './components/Footer';
 import LeadModal from './components/LeadModal';
 
@@ -42,6 +43,7 @@ export default function App() {
         <ComparisonTable onOpenModal={openModal} />
         <TrustSection />
         <FAQ />
+        <WhereYouWillLearn />
       </main>
       <Footer onOpenModal={openModal} />
       <LeadModal
