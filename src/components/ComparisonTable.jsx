@@ -1,6 +1,24 @@
+import { useState } from 'react';
 import { programmes } from '../data';
 
 export default function ComparisonTable({ onOpenModal }) {
+  // Select the first 3 programmes by default
+  const [selectedIds, setSelectedIds] = useState([
+    programmes[0]?.id, 
+    programmes[1]?.id, 
+    programmes[2]?.id
+  ].filter(Boolean));
+
+  // Handle changing a column
+  const handleSelect = (index, newId) => {
+    const newSelectedIds = [...selectedIds];
+    newSelectedIds[index] = newId;
+    setSelectedIds(newSelectedIds);
+  };
+
+  // Get the selected programme objects
+  const selectedProgrammes = selectedIds.map(id => programmes.find(p => p.id === id)).filter(Boolean);
+
   return (
     <section className="comparison-section reveal" id="comparison">
       <div className="container">
@@ -12,30 +30,49 @@ export default function ComparisonTable({ onOpenModal }) {
             <thead>
               <tr>
                 <th className="row-header">Feature</th>
-                {programmes.map(p => <th key={p.id}>{p.institute}</th>)}
+                {selectedProgrammes.map((p, index) => (
+                  <th key={index}>
+                    <select 
+                      className="compare-select" 
+                      value={p.id} 
+                      onChange={(e) => handleSelect(index, e.target.value)}
+                      aria-label={`Select programme for column ${index + 1}`}
+                    >
+                      {programmes.map((prog) => (
+                        <option 
+                          key={prog.id} 
+                          value={prog.id}
+                          disabled={selectedIds.includes(prog.id) && prog.id !== p.id}
+                        >
+                          {prog.institute}
+                        </option>
+                      ))}
+                    </select>
+                  </th>
+                ))}
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td className="row-header">Duration</td>
-                {programmes.map(p => <td key={p.id}>{p.duration}</td>)}
+                {selectedProgrammes.map((p, index) => <td key={index}>{p.duration}</td>)}
               </tr>
               <tr>
                 <td className="row-header">Campus Immersion</td>
-                {programmes.map(p => <td key={p.id}>{p.campusImmersion}</td>)}
+                {selectedProgrammes.map((p, index) => <td key={index}>{p.campusImmersion}</td>)}
               </tr>
               <tr>
                 <td className="row-header">Fee (excl. GST)</td>
-                {programmes.map(p => <td key={p.id}>{p.fee}</td>)}
+                {selectedProgrammes.map((p, index) => <td key={index}>{p.fee}</td>)}
               </tr>
               <tr>
                 <td className="row-header">Batch Starts</td>
-                {programmes.map(p => <td key={p.id}>{p.startDate}</td>)}
+                {selectedProgrammes.map((p, index) => <td key={index}>{p.startDate}</td>)}
               </tr>
               <tr>
                 <td className="row-header">Action</td>
-                {programmes.map(p => (
-                  <td key={p.id}>
+                {selectedProgrammes.map((p, index) => (
+                  <td key={index}>
                     <button type="button" className="link-btn" onClick={() => onOpenModal('brochure', p.id)}>
                       Download Brochure &rarr;
                     </button>
@@ -45,7 +82,7 @@ export default function ComparisonTable({ onOpenModal }) {
             </tbody>
           </table>
         </div>
-        <div className="table-footnote">
+        <div className="table-footnote" style={{ marginTop: '24px' }}>
           <p>Application/Registration fees (₹15,000–₹25,000 depending on programme) are separate and payable at the time of application. EMI options available — terms offered by TimesPro, not the partner institute.</p>
           <button type="button" className="btn btn-secondary mt-16" onClick={() => onOpenModal('callback', '')}>Not Ready to Pick One? Request a Callback &rarr;</button>
         </div>
