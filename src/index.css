@@ -320,7 +320,7 @@ section[id], main[id] { scroll-margin-top: calc(var(--sticky-h) + 16px); }
 .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('./assets/img/ai-bg.webp');
+    background-image: url('/assets/img/ai-bg.webp');
     background-size: cover;
     background-position: center;
     z-index: -2;
