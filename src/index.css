@@ -320,7 +320,7 @@ section[id], main[id] { scroll-margin-top: calc(var(--sticky-h) + 16px); }
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: url('/assets/img/banner.png') center/cover no-repeat;
+    background: url('/assets/img/banner.jpg') center/cover no-repeat;
     z-index: -2;
 }
 .hero-gradient-overlay {
