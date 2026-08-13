@@ -2,7 +2,7 @@ export const programmes = [
   {
     id: "calcutta",
     institute: "IIM Calcutta",
-    logo: "/assets/logos/iim-calcutta.png", // Assume we'll have or need placeholder
+    logo: "/assets/logos/iim-calcutta-new.png",
     campusImage: "https://placehold.co/600x400/eaebec/1f2937?text=IIM+Calcutta+Campus", // Placeholder until provided
     name: "Senior Management Programme (Batch 27)",
     duration: "12 months",
@@ -16,7 +16,7 @@ export const programmes = [
   {
     id: "indore",
     institute: "IIM Indore",
-    logo: "/assets/logos/iim-indore.jpg",
+    logo: "/assets/logos/iim-indore-new.jpg",
     campusImage: "/assets/img/iim-indore-campus.jpg",
     name: "Senior Management Programme (Batch 07)",
     duration: "12 months",
@@ -30,7 +30,7 @@ export const programmes = [
   {
     id: "kashipur",
     institute: "IIM Kashipur",
-    logo: "/assets/logos/iim-kashipur.png",
+    logo: "/assets/logos/iim-kashipur-new.png",
     campusImage: "https://placehold.co/600x400/eaebec/1f2937?text=IIM+Kashipur+Campus", // Placeholder until provided
     name: "Senior Management Programme (Batch 05)",
     duration: "12 months",
@@ -44,7 +44,7 @@ export const programmes = [
   {
     id: "nagpur",
     institute: "IIM Nagpur",
-    logo: "/assets/logos/iim-nagpur.jpg",
+    logo: "/assets/logos/iim-nagpur-new.jpg",
     campusImage: "/assets/img/iim-nagpur-campus.jpg",
     name: "Senior Management Programme (Batch 11)",
     duration: "12 months",

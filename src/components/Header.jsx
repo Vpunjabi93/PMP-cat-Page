@@ -5,7 +5,7 @@ export default function Header({ onOpenModal }) {
         <div className="nav-container">
           <div className="brand-lockup">
             <a href="#top" className="brand-link" aria-label="TimesPro home">
-              <img src="/assets/logos/timespro.svg" alt="TimesPro" className="brand-logo brand-logo--timespro" />
+              <img src="https://timespro.com/icons/Timespro_logo.svg" alt="TimesPro" className="brand-logo brand-logo--timespro" />
             </a>
           </div>
           <span className="top-nav-tag">Senior Management Programmes</span>
@@ -14,7 +14,7 @@ export default function Header({ onOpenModal }) {
       <nav className="sticky-nav" id="stickyNav" aria-label="Section navigation">
         <div className="nav-container">
           <a href="#top" className="brand-link" aria-label="TimesPro home">
-            <img src="/assets/logos/timespro.svg" alt="TimesPro" className="brand-logo brand-logo--sticky" />
+            <img src="https://timespro.com/icons/Timespro_logo.svg" alt="TimesPro" className="brand-logo brand-logo--sticky" />
           </a>
           <div className="sticky-links">
             <a href="#programmes">Programmes</a>

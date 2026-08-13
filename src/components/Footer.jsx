@@ -19,7 +19,7 @@ export default function Footer({ onOpenModal }) {
       <footer className="site-footer">
         <div className="container site-footer-inner">
           <div className="site-footer-brand">
-            <span className="logo logo-sm">TimesPro</span>
+            <img src="https://timespro.com/icons/Timespro_logo.svg" alt="TimesPro" style={{ height: '30px', marginBottom: '16px' }} />
             <p>TimesPro is the delivery partner for these programmes. Certificates are awarded by the respective partner institutes (IIM Calcutta, IIM Indore, IIM Kashipur, IIM Nagpur). EMI and financing, where offered, are services of TimesPro and not the partner institute.</p>
           </div>
           <nav className="site-footer-links" aria-label="Footer">
