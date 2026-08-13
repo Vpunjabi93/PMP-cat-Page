@@ -319,14 +319,9 @@ section[id], main[id] { scroll-margin-top: calc(var(--sticky-h) + 16px); }
 }
 .hero-bg {
     position: absolute;
-    inset: -150px; /* Bleed area to allow panning without showing edges */
+    inset: 0;
     background: url('/assets/img/banner.jpg') center/cover no-repeat;
     z-index: -2;
-}
-@media (min-width: 1024px) {
-    .hero-bg {
-        transform: translate(70px, -40px);
-    }
 }
 .hero-gradient-overlay {
     position: absolute;
