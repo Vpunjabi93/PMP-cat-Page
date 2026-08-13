@@ -59,24 +59,24 @@ export const programmes = [
 
 export const faqs = [
   {
-    question: "Do I have to take a break from my career?",
-    answer: "No. All programmes are designed specifically for working executives. Classes are held live online on Sundays (typically 3-4 hours), allowing you to balance academic rigor with your professional commitments."
+    question: "How does a Senior Management Programme differ from a standard Executive MBA?",
+    answer: "While an Executive MBA covers foundational business functions, an SMP is laser-focused on cross-functional leadership, corporate strategy, and governance. It is designed specifically for executives who already possess deep functional expertise and need to develop a holistic, CEO-level perspective."
   },
   {
-    question: "Will I receive IIM Alumni Status?",
-    answer: "Yes. Upon successful completion of the programme and meeting attendance/grading criteria, you will be awarded Executive Education Alumni status from the respective IIM, granting you access to an elite, pan-India network of business leaders."
+    question: "How will this programme help me transition to a C-Suite role?",
+    answer: "The curriculum is built to bridge the gap between functional execution and organizational leadership. You will learn how to manage complex P&L, drive digital transformation, negotiate at the board level, and align corporate strategy with global economic trends."
   },
   {
-    question: "What are the eligibility criteria?",
-    answer: "Because these are senior-level programmes, all institutes require a minimum of 10 years of full-time work experience post-graduation, along with a Bachelor's or Master's degree with at least 50% aggregate marks."
+    question: "Will the peer group match my level of seniority?",
+    answer: "Yes. With a strict mandate of 10+ years of experience, your cohort will consist exclusively of seasoned professionals—AVPs, Directors, and functional heads. This ensures that case discussions are highly sophisticated and your networking opportunities are with peers at or above your level."
   },
   {
-    question: "Is attending the campus immersion mandatory?",
-    answer: "Yes. The campus immersions (ranging from 3 to 10 days depending on the institute) are a mandatory and highly valuable component of the curriculum. They provide critical in-person networking, collaborative projects, and direct faculty interaction."
+    question: "How do I balance the rigorous coursework with my executive responsibilities?",
+    answer: "The format—featuring live, interactive weekend sessions—is tailored for busy leaders. Furthermore, the pedagogy emphasizes applied learning; your assignments and capstone projects will often involve solving actual strategic challenges within your current organization."
   },
   {
-    question: "Are there payment plans available?",
-    answer: "Each programme has a structured installment schedule spread across the year. Additionally, TimesPro offers EMI and financing options to help manage the investment. (Note: Financing is a service of TimesPro, not the partner institutes)."
+    question: "How does the IIM Executive Alumni status benefit me?",
+    answer: "Upon successful completion, you gain Executive Education Alumni status, unlocking access to an elite, pan-India network of business leaders. This provides lifelong opportunities for strategic partnerships, board appointments, and exclusive alumni resources."
   }
 ];
 
