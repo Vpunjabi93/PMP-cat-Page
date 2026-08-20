@@ -109,7 +109,7 @@ export const programmes = [
     campusImmersion: "Optional; travel and stay at your cost",
     eligibility: "Graduates in any discipline",
     learningHours: "3.5 hours per weekend",
-    tools: "Primavera P6, Harvard case studies",
+    tools: "Primavera P6",
     credential: "e-Certificate from CEP, IIT Delhi",
     edge: "Primavera P6 + 30-hour PMP training with 35 PDUs",
   },

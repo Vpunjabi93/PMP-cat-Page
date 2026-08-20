@@ -6,7 +6,7 @@ const ROWS = [
   { label: 'Classes', key: 'schedule' },
   { label: 'Eligibility', key: 'eligibility' },
   { label: 'Campus immersion', key: 'campusImmersion' },
-  { label: 'Tools covered', key: 'tools' },
+  { label: 'Tools covered', key: 'tools', suffix: ' and more' },
   { label: 'Fee (excl. GST)', key: 'fee' },
   { label: 'Batch starts', key: 'startDate' },
   { label: 'You end up with', key: 'credential' },
@@ -67,7 +67,7 @@ export default function ComparisonTable({ onOpenModal }) {
               {ROWS.map((row) => (
                 <tr key={row.key}>
                   <td className="row-header">{row.label}</td>
-                  {selectedProgrammes.map((p, index) => <td key={index}>{p[row.key]}</td>)}
+                  {selectedProgrammes.map((p, index) => <td key={index}>{p[row.key]}{row.suffix}</td>)}
                 </tr>
               ))}
               <tr>

@@ -62,14 +62,14 @@ export default function ProgrammeGrid({ onOpenModal }) {
                       <div><dt>Fee (excl. GST)</dt><dd>{prog.fee}</dd></div>
                       <div><dt>Eligibility</dt><dd>{prog.eligibility}</dd></div>
                       <div><dt>Campus immersion</dt><dd>{prog.campusImmersion}</dd></div>
-                      <div><dt>Tools covered</dt><dd>{prog.tools}</dd></div>
+                      <div><dt>Tools covered</dt><dd>{prog.tools} and more</dd></div>
                     </dl>
 
                     {prog.note && <p className="prog-note">{prog.note}</p>}
 
                     <div className="prog-cta">
                       <button type="button" className="btn btn-primary btn-block" onClick={() => onOpenModal('brochure', prog.id)}>Download Brochure</button>
-                      <button type="button" className="btn btn-outline btn-block" style={{marginTop: '10px'}} onClick={() => onOpenModal('callback', prog.id)}>Ask About This One</button>
+                      <button type="button" className="btn btn-outline btn-block" style={{marginTop: '10px'}} onClick={() => onOpenModal('callback', prog.id)}>Talk to an Advisor</button>
                     </div>
                   </div>
                 ))}
