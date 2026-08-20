@@ -37,7 +37,7 @@ export const programmes = [
     aim: "foundations",
     institute: "IIM Indore",
     logo: "/assets/logos/iim-indore-new.jpg",
-    campusImage: "/assets/img/iim-indore-campus.jpg",
+    campusImage: "/assets/img/campus-iim-indore.jpg",
     name: "Certificate Programme in Project Management (Batch 19)",
     brochureUrl: "https://www.timespro.com/brochure/iimi-cppm",
     outcome:
@@ -65,7 +65,7 @@ export const programmes = [
     institute: "IIT Delhi",
     instituteNote: "Continuing Education Programme (CEP)",
     logo: "/assets/logos/iit-delhi.png",
-    campusImage: "/assets/img/iit-delhi-campus.jpg",
+    campusImage: "/assets/img/campus-iit-delhi.jpg",
     name: "Executive Programme in Advanced Project Management (Batch 05)",
     brochureUrl: "https://www.timespro.com/brochure/iitd-epapm",
     outcome:
@@ -93,7 +93,7 @@ export const programmes = [
     institute: "IIT Madras Pravartak",
     instituteNote: "Technology Innovation Hub of IIT Madras",
     logo: "/assets/logos/iitm-pravartak.png",
-    campusImage: "/assets/img/iit-madras-campus.jpg",
+    campusImage: "/assets/img/campus-iitm-pravartak.jpg",
     name: "Certificate Programme in Advanced Project Management (Batch 01)",
     brochureUrl: "https://www.timespro.com/brochure/iitmp-cpapm",
     outcome:
@@ -120,7 +120,7 @@ export const programmes = [
     aim: "craft",
     institute: "IIM Nagpur",
     logo: "/assets/logos/iim-nagpur-new.jpg",
-    campusImage: "/assets/img/iim-nagpur-campus.jpg",
+    campusImage: "/assets/img/campus-iim-nagpur.jpg",
     name: "Certificate Programme in Project Management (Batch 09)",
     brochureUrl: "https://www.timespro.com/brochure/iimn-pmp",
     outcome:
