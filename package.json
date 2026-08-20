@@ -1,9 +1,9 @@
 {
-  "name": "smp-cat-page",
+  "name": "pmp-cat-page",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://vpunjabi93.github.io/SMP-Cat-Page/",
+  "homepage": "https://vpunjabi93.github.io/PMP-cat-Page/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
