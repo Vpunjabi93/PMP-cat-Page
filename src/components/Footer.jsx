@@ -3,15 +3,15 @@ export default function Footer({ onOpenModal }) {
     <>
       <section className="footer-cta">
         <div className="container text-center">
-          <h2 className="section-title text-white">Ready to Take the Next Step in Your Leadership Journey?</h2>
+          <h2 className="section-title text-white">Still Weighing Up Six Options?</h2>
           <div className="footer-actions">
             <div className="action-box">
-              <button type="button" className="btn btn-secondary-white btn-block" onClick={() => onOpenModal('callback', '')}>Request a Callback &rarr;</button>
-              <span className="microcopy">Discuss your experience and career goals — we'll help you find the right IIM.</span>
+              <button type="button" className="btn btn-secondary-white btn-block" onClick={() => onOpenModal('callback', '')}>Talk to an Advisor &rarr;</button>
+              <span className="microcopy">Tell us your experience and where you want to be in two years. We&rsquo;ll narrow six down to two.</span>
             </div>
             <div className="action-box">
-              <button type="button" className="btn btn-primary-white btn-block" onClick={() => onOpenModal('brochure', '')}>Download Brochure &rarr;</button>
-              <span className="microcopy">Get detailed curriculum, fee structure, and eligibility in one document.</span>
+              <button type="button" className="btn btn-primary-white btn-block" onClick={() => onOpenModal('brochure', '')}>Get All Six Brochures &rarr;</button>
+              <span className="microcopy">Full curriculum, fee structure and eligibility for every programme, in one go.</span>
             </div>
           </div>
         </div>
@@ -20,7 +20,7 @@ export default function Footer({ onOpenModal }) {
         <div className="container site-footer-inner">
           <div className="site-footer-brand">
             <img src="https://timespro.com/icons/Timespro_logo.svg" alt="TimesPro" style={{ height: '30px', marginBottom: '16px' }} />
-            <p>TimesPro is the delivery partner for these programmes. Certificates are awarded by the respective partner institutes (IIM Calcutta, IIM Indore, IIM Kashipur, IIM Nagpur). EMI and financing, where offered, are services of TimesPro and not the partner institute.</p>
+            <p>TimesPro is the delivery partner for these programmes. Certificates are awarded by the respective partner institutes: IIM Indore, IIM Kozhikode, IIM Nagpur, CEP IIT Delhi, IITM Pravartak and XLRI Jamshedpur. Career services, PMP exam preparation, GenAI certifications, EMI and financing are services of TimesPro and not of the partner institutes.</p>
           </div>
           <nav className="site-footer-links" aria-label="Footer">
             <a href="#" rel="noopener">Privacy Policy</a>

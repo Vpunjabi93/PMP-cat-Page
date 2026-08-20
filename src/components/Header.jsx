@@ -8,7 +8,7 @@ export default function Header({ onOpenModal }) {
               <img src="https://timespro.com/icons/Timespro_logo.svg" alt="TimesPro" className="brand-logo brand-logo--timespro" />
             </a>
           </div>
-          <span className="top-nav-tag">Senior Management Programmes</span>
+          <span className="top-nav-tag">Project Management Programmes</span>
         </div>
       </header>
       <nav className="sticky-nav" id="stickyNav" aria-label="Section navigation">

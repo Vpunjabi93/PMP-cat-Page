@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { programmes } from '../data';
 
 export default function LeadModal({ isOpen, onClose, modalType, selectedProgram }) {
   const [formData, setFormData] = useState({
@@ -75,6 +76,7 @@ export default function LeadModal({ isOpen, onClose, modalType, selectedProgram 
             <select id="modalExperience" required value={formData.experience} onChange={e => setFormData({...formData, experience: e.target.value})}>
               <option value="" disabled>Select your experience</option>
               <option value="Fresher">Fresher</option>
+              <option value="1-2 years">1-2 years</option>
               <option value="2-5 years">2-5 years</option>
               <option value="5-10 years">5-10 years</option>
               <option value="10-15 years">10-15 years</option>
@@ -86,10 +88,9 @@ export default function LeadModal({ isOpen, onClose, modalType, selectedProgram 
             <select id="modalProgramme" required value={formData.programme} onChange={e => setFormData({...formData, programme: e.target.value})}>
               <option value="" disabled>Select a programme</option>
               <option value="Help me decide">Help me decide</option>
-              <option value="calcutta">IIM Calcutta Senior Management Programme</option>
-              <option value="indore">IIM Indore Senior Management Programme</option>
-              <option value="kashipur">IIM Kashipur Senior Management Programme</option>
-              <option value="nagpur">IIM Nagpur Senior Management Programme</option>
+              {programmes.map((prog) => (
+                <option key={prog.id} value={prog.id}>{prog.institute}</option>
+              ))}
             </select>
           </div>
           <div className="form-group form-consent">

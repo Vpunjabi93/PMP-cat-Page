@@ -719,6 +719,74 @@ section[id], main[id] { scroll-margin-top: calc(var(--sticky-h) + 16px); }
 }
 .prog-cta { margin-top: auto; }
 
+/* Aim groups: the page sorts programmes by what the visitor wants, not by institute */
+.aim-group { margin-bottom: 64px; }
+.aim-group:last-child { margin-bottom: 0; }
+.aim-header {
+    border-left: 4px solid var(--tp-red);
+    padding-left: 20px;
+    margin-bottom: 28px;
+}
+.aim-title {
+    font-size: 24px;
+    color: var(--tp-navy);
+    margin-bottom: 8px;
+}
+.aim-blurb {
+    font-size: 16px;
+    color: var(--tp-dark-gray);
+    max-width: 720px;
+    margin: 0;
+}
+.prog-institute-note {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    color: var(--tp-dark-gray);
+    margin-top: 4px;
+}
+
+/* Key facts block on each programme card */
+.prog-facts {
+    margin: 0 0 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--tp-border);
+    font-size: 13px;
+}
+.prog-facts > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 6px 0;
+}
+.prog-facts > div + div { border-top: 1px dashed var(--tp-border); }
+.prog-facts dt {
+    color: var(--tp-dark-gray);
+    flex-shrink: 0;
+}
+.prog-facts dd {
+    margin: 0;
+    font-weight: 600;
+    color: var(--tp-navy);
+    text-align: right;
+}
+.prog-note {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--tp-dark-gray);
+    margin: -12px 0 20px;
+}
+.campus-detail {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.85;
+    margin-top: 2px;
+}
+
 .empty-state {
     grid-column: 1 / -1;
     text-align: center;

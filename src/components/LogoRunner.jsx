@@ -1,11 +1,12 @@
 import React from 'react';
 
+// XLRI Jamshedpur is the sixth partner — add its logo here once the asset is in /public.
 const logos = [
-  '/assets/logos/iim-calcutta-new.png',
   '/assets/logos/iim-indore-new.jpg',
-  '/assets/logos/iim-kashipur-new.png',
   '/assets/logos/iim-kozhikode-new.png',
-  '/assets/logos/iim-nagpur-new.jpg'
+  '/assets/logos/iim-nagpur-new.jpg',
+  '/assets/logos/iit-delhi.png',
+  '/assets/logos/iitm-pravartak.png'
 ];
 
 export default function LogoRunner() {
@@ -16,7 +17,7 @@ export default function LogoRunner() {
         {/* Duplicating the array 3 times ensures a smooth infinite loop regardless of screen size */}
         {[...logos, ...logos, ...logos].map((logo, index) => (
           <div key={index} className="logo-runner-item">
-            <img src={`${base}${logo.replace(/^\//, '')}`} alt={`Institute Partner ${index}`} loading="lazy" />
+            <img src={`${base}${logo.replace(/^\//, '')}`} alt="" aria-hidden="true" loading="lazy" />
           </div>
         ))}
       </div>

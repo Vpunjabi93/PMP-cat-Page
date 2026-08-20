@@ -11,7 +11,7 @@ export default function FAQ() {
   return (
     <section className="faq-section" id="faq">
       <div className="container faq-container">
-        <h2 className="section-title">Common Questions Before You Apply</h2>
+        <h2 className="section-title">Questions Worth Answering Before You Apply</h2>
         <div className="accordion">
           {faqs.map((faq, index) => (
             <div key={index} className="accordion-item">
