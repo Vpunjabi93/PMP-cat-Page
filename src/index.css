@@ -658,30 +658,29 @@ section[id], main[id] { scroll-margin-top: calc(var(--sticky-h) + 16px); }
     transform: translateY(-4px);
 }
 .prog-institute {
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase;
     font-weight: 700;
     color: var(--tp-navy);
-    letter-spacing: 1px;
-    margin-bottom: 16px;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
+    text-align: left;
     gap: 12px;
 }
 .prog-logo {
-    height: 70px;
-    width: auto;
-    max-width: 100%;
+    height: 44px;
+    width: 56px;
     object-fit: contain;
-    object-position: center;
+    object-position: left center;
     flex-shrink: 0;
 }
 .prog-title {
-    font-size: 20px;
-    margin-bottom: 16px;
-    text-align: center;
+    font-size: 18px;
+    margin-bottom: 14px;
+    text-align: left;
 }
 .prog-badge {
     display: inline-block;
@@ -715,11 +714,119 @@ section[id], main[id] { scroll-margin-top: calc(var(--sticky-h) + 16px); }
 }
 .prog-desc {
     font-size: 14px;
-    margin-bottom: 24px;
-    color: var(--tp-dark-gray);
-    flex-grow: 1;
+    margin-bottom: 12px;
+    color: var(--tp-navy-dark);
 }
-.prog-cta { margin-top: auto; }
+.prog-cta {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
+.prog-cta .btn { flex: 1; padding-inline: 8px; }
+
+/* Filter bar: outcome and institute, narrowing the same grid */
+.filter-bar {
+    background: var(--tp-white);
+    border: 1px solid var(--tp-border);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.filter-row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.filter-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--tp-dark-gray);
+    flex-shrink: 0;
+    min-width: 68px;
+}
+.filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-chip {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--tp-navy);
+    background: var(--tp-white);
+    border: 1px solid var(--tp-border);
+    border-radius: 999px;
+    padding: 7px 14px;
+    cursor: pointer;
+    transition: background 0.2s var(--ease), border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+.filter-chip:hover { border-color: var(--tp-navy); }
+.filter-chip.is-active {
+    background: var(--tp-navy);
+    border-color: var(--tp-navy);
+    color: var(--tp-white);
+}
+.filter-status {
+    font-size: 13px;
+    color: var(--tp-dark-gray);
+    margin: 0;
+    padding-top: 4px;
+    border-top: 1px solid var(--tp-border);
+}
+.filter-clear { margin-left: 12px; font-size: 13px; }
+
+/* Compact spec strip at the top of each card */
+.prog-spec {
+    display: flex;
+    list-style: none;
+    margin: 0 0 18px;
+    padding: 14px 0;
+    border-top: 1px solid var(--tp-border);
+    border-bottom: 1px solid var(--tp-border);
+}
+.prog-spec li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+    padding: 0 6px;
+}
+.prog-spec li + li { border-left: 1px solid var(--tp-border); }
+.prog-spec span {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--tp-dark-gray);
+}
+.prog-spec strong { font-size: 14px; color: var(--tp-navy); }
+
+.prog-bestfor {
+    font-size: 14px;
+    color: var(--tp-dark-gray);
+    margin: 0 0 16px;
+}
+
+/* Highlight pills */
+.prog-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin: 0 0 20px;
+    padding: 0;
+}
+.prog-chips li {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--tp-red);
+    background: var(--tp-light-pink);
+    border-radius: 4px;
+    padding: 5px 9px;
+}
 
 /* Aim groups: the page sorts programmes by what the visitor wants, not by institute */
 .aim-group { margin-bottom: 64px; }
